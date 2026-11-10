@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samy – Portfolio BTS SIO</title>
+  <meta name="description" content="Portfolio de Samy, étudiant en BTS SIO : parcours, réalisations, veille technologique et tableau de synthèse E5.">
+
+  <!-- Polices (si elles ne chargent pas, le navigateur utilise les polices de secours) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700&family=IBM+Plex+Mono&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+
+  <header class="site-header">
+    <a class="logo" href="#accueil">Jawad</a>
+    <nav aria-label="Navigation principale">
+      <a href="#parcours">Parcours</a>
+      <a href="#competences">Compétences</a>
+      <a href="#realisations">Réalisations</a>
+      <a href="#veille">Veille</a>
+      <a href="#e5">Tableau E5</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ACCUEIL -->
+    <section id="accueil" class="hero">
+      <div class="hero-text">
+        <h1>Étudiant en BTS SIO, entre développement web et support informatique.</h1>
+        <p>
+          Je suis en première année au lycée Charles de Foucauld (Paris 18<sup>e</sup>).
+          Je cherche un stage de 6 semaines à partir de mars 2027.
+          Avant l’informatique, j’ai appris à travailler en équipe et sous pression en cuisine.
+        </p>
+        <p class="hero-links">
+          <a class="btn" href="#realisations">Voir mes réalisations</a>
+          <a class="btn btn-light" href="docs/CV-Jawad.pdf">Télécharger mon CV (PDF)</a>
+        </p>
+      </div>
+
+      <!-- Le « bon de commande » : clin d’œil à mon poste en restauration -->
+      <aside class="ticket" aria-label="Résumé de ma recherche de stage">
+        <p class="ticket-title">BON DE COMMANDE n°1</p>
+        <ul>
+          <li><span>1 ×</span> Développement web</li>
+          <li><span>1 ×</span> Support informatique</li>
+          <li><span>6 sem.</span> à partir de mars 2027</li>
+        </ul>
+        <p class="ticket-foot">Préparé avec soin, servi dans les temps.</p>
+      </aside>
+    </section>
+
+    <!-- PARCOURS -->
+    <section id="parcours">
+      <h2>Mon parcours</h2>
+
+      <ol class="timeline">
+        <li>
+          <h3>BTS SIO – 1<sup>re</sup> année</h3>
+          <p class="meta">Lycée Charles de Foucauld, Paris 18<sup>e</sup> · 2026-2027</p>
+          <p>
+            Découverte du développement, des réseaux et du support informatique.
+            <mark class="todo">Option choisie : SLAM ou SISR ?</mark>
+          </p>
+        </li>
+        <li>
+          <h3>Intérim en restauration (cuisinier)</h3>
+          <p class="meta">Depuis 3 ans</p>
+          <p>
+            Le travail en cuisine m’a appris la rigueur, l’organisation de mon poste
+            et la communication avec l’équipe.
+            Ces qualités me servent aujourd’hui pour travailler en groupe et respecter des délais.
+          </p>
+        </li>
+        <li>
+          <h3>Baccalauréat STMG, option SIG</h3>
+          <p class="meta">Lycée Charles de Foucauld, Paris 18<sup>e</sup></p>
+          <p>Premières bases en systèmes d’information de gestion.</p>
+        </li>
+      </ol>
+
+      <h3 class="sub">Qui suis-je ?</h3>
+      <p>
+        Persévérant, organisé et à l’aise en équipe, j’aime comprendre comment les choses
+        fonctionnent. J’ai appris le HTML et le CSS en autodidacte, puis j’ai approfondi
+        le développement web et les bases de données en BTS.
+		Plus tard, j'aimerais faire un métier concret dans la cybersécurité, mais je ne sais pas encore précisément lequel.
+      </p>
+    </section>
+
+    <!-- COMPETENCES -->
+    <section id="competences">
+      <h2>Compétences techniques</h2>
+      <div class="skills">
+        <div>
+          <h3>Web</h3>
+          <p>HTML, CSS</p>
+          <p>PHP <span class="level">niveau débutant</span></p>
+        </div>
+        <div>
+          <h3>Données</h3>
+          <p>MySQL, langage SQL</p>
+        </div>
+        <div>
+          <h3>Savoir-être</h3>
+          <p>Travail d’équipe, sens de l’organisation, persévérance</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- REALISATIONS -->
+    <section id="realisations">
+      <h2>Mes réalisations</h2>
+      <p class="intro">Pour chaque projet : le contexte, ce que j’ai fait, les difficultés et les sources.</p>
+
+      <article class="project">
+        <h3>Site vitrine relié à une base de données</h3>
+        <p class="meta">Projet de BTS SIO · HTML, CSS, PHP, MySQL</p>
+
+        <dl>
+          <dt>Contexte</dt>
+          <dd>
+            Création d’un site vitrine pour une organisation fictive, avec des informations
+            affichées à partir d’une base de données.
+            Site internet fait à l’aide d’un de mes professeurs, pour un projet personnel.
+          </dd>
+
+          <dt>Objectifs</dt>
+          <dd>Présenter l’organisation de façon claire et faire dialoguer les pages web avec une base de données.</dd>
+
+          <dt>Ce que j’ai réalisé</dt>
+          <dd>
+            <ul class="tools">
+              <li>La structure et le style des pages en HTML et CSS.</li>
+              <li>Une base de données MySQL fictive pour stocker les informations.</li>
+              <li>Des pages en PHP qui lisent la base grâce à des requêtes SQL.</li>
+            </ul>
+          </dd>
+
+          <dt>Difficultés rencontrées</dt>
+          <dd><p>Utiliser les bonnes syntaxes et apprendre les différents langages de programmation.</p></dd>
+
+          <dt>Ce que j’ai appris</dt>
+          <dd><p> J’ai pu apprendre le fonctionnement concret des bases de données et la façon
+			d’interagir avec elles. J’ai compris comment les informations sont organisées
+			dans des tables, puis comment les lire grâce à des requêtes SQL depuis une page
+			PHP pour les afficher sur le site. Ce projet m’a aussi montré l’importance de
+			bien structurer les données dès le départ.</p></dd>
+
+          <dt>Sources et documentation</dt>
+          <dd>
+            <a href="https://www.php.net/manual/fr/">Documentation PHP</a>
+          </dd>
+        </dl>
+      </article>
+
+      <article class="project">
+        <h3>Ce portfolio</h3>
+        <p class="meta">Projet personnel · HTML, CSS, GitHub Pages</p>
+        <dl>
+          <dt>Contexte</dt>
+          <dd>Réalisé en AP pour présenter mon parcours, mes projets et ma veille, sans utiliser de CMS.</dd>
+          <dt>Ce que j’ai réalisé</dt>
+          <dd>Un site statique écrit à la main, adapté aux téléphones, hébergé gratuitement sur GitHub Pages.</dd>
+          <dt>Sources et documentation</dt>
+          <dd>
+            <a href="https://github.com/TON-PSEUDO/TON-PSEUDO.github.io">Code source du portfolio</a> ·
+            <a href="https://docs.github.com/fr/pages">Documentation GitHub Pages</a>
+          </dd>
+        </dl>
+      </article>
+    </section>
+
+    <!-- VEILLE -->
+    <section id="veille">
+      <h2>Ma veille technologique</h2>
+
+      <h3 class="sub">Qu’est-ce que la veille technologique ?</h3>
+      <p>
+        C’est une activité qui consiste à surveiller de façon régulière les évolutions d’un domaine
+        (nouveaux outils, failles de sécurité, nouvelles versions) pour rester à jour et anticiper les changements.
+      </p>
+      <p>
+        Dans l’informatique, les outils et les menaces changent très vite : un technicien ou un développeur
+        qui ne se tient pas informé travaille avec des méthodes dépassées et peut mettre en danger
+        les systèmes de son entreprise.
+      </p>
+
+      <h3 class="sub">La méthode</h3>
+      <ol class="steps">
+        <li><strong>Définir</strong> le sujet et les besoins d’information.</li>
+        <li><strong>Collecter</strong> les informations dans des sources choisies.</li>
+        <li><strong>Trier et analyser</strong> : garder ce qui est fiable et utile.</li>
+        <li><strong>Diffuser</strong> : résumer et partager ce qu’on a retenu.</li>
+        <li><strong>Stocker</strong> pour pouvoir retrouver l’information plus tard.</li>
+      </ol>
+
+      <h3 class="sub">Les types de veille et leurs outils</h3>
+      <div class="types">
+        <div>
+          <h4>Veille technologique</h4>
+          <p>Nouveautés des langages, outils et matériels. Outils : lecteur de flux RSS (Feedly, Inoreader), newsletters.</p>
+        </div>
+        <div>
+          <h4>Veille sécurité</h4>
+          <p>Failles et alertes. Outils : avis du CERT-FR, flux RSS, alertes par e-mail.</p>
+        </div>
+        <div>
+          <h4>Veille juridique</h4>
+          <p>Lois et règles (RGPD, par exemple). Outils : sites de la CNIL et de Légifrance.</p>
+        </div>
+        <div>
+          <h4>Veille concurrentielle</h4>
+          <p>Ce que font les autres entreprises. Outils : Google Alerts, surveillance de pages web.</p>
+        </div>
+      </div>
+
+      <h3 class="sub">Mon sujet : la sécurité des systèmes et des réseaux</h3>
+      <p>
+       <p>
+  J’ai choisi ce sujet parce que je m’oriente vers l’option SISR, où l’on installe,
+  protège et surveille les serveurs et les réseaux d’une entreprise. Les failles dans
+  les services d’accès à distance ou dans les logiciels de gestion de parc sont une
+  menace réelle pour une organisation. Suivre ces alertes est utile en stage, que ce
+  soit au support ou à l’administration des systèmes.
+		</p>
+
+
+      <h3 class="sub">Mon dispositif de notification</h3>
+      <p>Je ne cherche pas l’information : c’est elle qui vient à moi.</p>
+      <ul class="tools">
+        <li><strong>Lecteur de flux RSS</strong> : j’y abonne les sites de mes sources et je reçois leurs nouveaux articles au même endroit.</li>
+        <li>J'essaie de lire au moins deux articles par jours.</li>
+      </ul>
+      <figure>
+	  
+  <img src="images/capture-feedly.png"
+       alt="Mon lecteur Feedly avec trois dossiers : sécurité web, PHP et SQL, juridique"
+       style="max-width: 100%;">
+  <figcaption>Mon lecteur de flux Feedly</figcaption>
+</figure>
+
+      <h3 class="sub">Mes sources</h3>
+      <ul class="tools">
+        <li><a href="https://www.cert.ssi.gouv.fr/">CERT-FR</a> : alertes et avis de sécurité publiés par un organisme officiel (ANSSI).</li>
+        <li><a href="https://www.cybermalveillance.gouv.fr/">Cybermalveillance.gouv.fr</a> : conseils clairs sur les risques informatiques et la prévention.</li>
+        <li><a href="https://php.watch/">PHP.Watch</a> : nouveautés, changements et mises à jour du langage PHP.</li>
+        <li><a href="https://www.lemagit.fr/">LeMagIT</a> : actualité informatique et sécurité en français.</li>
+        <li><a href="https://www.cnil.fr/">CNIL</a> : règles sur la protection des données personnelles (RGPD).</li>
+      </ul>
+
+      <h3 class="sub">Mon journal de veille</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Date</th><th>Source</th><th>Ce que j’en retiens</th></tr>
+          </thead>
+          <tbody>
+            <tr>
+             <td>10/11/2026</td>
+			 <td><a href="https://cert.cyber.gouv.fr/alerte/CERTFR-2026-ALE-015/">CERT-FR : alerte de sécurité sur OpenSSH</a> (publiée le 05/11/2026)</td>
+			 <td>OpenSSH, le service qui permet de se connecter à distance à un serveur, fait l’objet d’une faille qui permet de contourner l’authentification. Je retiens qu’il faut suivre ces alertes et appliquer rapidement les mises à jour, car un attaquant pourrait entrer sans identifiants valables.</td>
+            </tr>
+            <tr>
+             <td>10/11/2026</td>
+			 <td><a href="https://www.cnil.fr/fr/sanction-cookies-app-fnac">CNIL : sanction de 7 millions d’euros contre Fnac Darty</a> (publiée le 29/10/2026)</td>
+			 <td>La CNIL a sanctionné deux sociétés du groupe parce que l’application mobile de la Fnac utilisait des traceurs sans demander le consentement des utilisateurs. Je retiens que les règles sur les cookies et les données personnelles s’appliquent aussi aux applications, et qu’un développeur web doit les respecter.</td>
+            </tr>
+            <tr>
+             <td>10/11/2026</td>
+			 <td><a href="https://php.watch/versions/8.6/releases/8.6.0beta3">PHP.Watch : PHP 8.6.0 Beta 3</a> (10/09/2026)</td>
+			 <td>Cette version de test de PHP corrige des bugs avant la sortie finale de PHP 8.6. Je retiens que PHP évolue chaque année et qu’il faut suivre les nouvelles versions pour que mes sites restent compatibles et à jour.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Ce sujet pourra être présenté à l’épreuve E5, et je pourrai le changer en deuxième année.</p>
+    </section>
+
+    <!-- TABLEAU DE SYNTHESE E5 -->
+    <section id="e5">
+      <h2>Tableau de synthèse E5</h2>
+      <p class="intro">
+        L’épreuve E5 est un oral sur mon parcours de professionnalisation.
+        Ce tableau relie chaque compétence à une preuve de mon portfolio.
+      </p>
+      <p><a class="btn" href="docs/tableau-synthese-E5.pdf">Télécharger le tableau (PDF)</a></p>
+
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Compétence</th><th>Preuve</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Gérer le patrimoine informatique</td><td>À compléter pendant le stage</td></tr>
+            <tr><td>Répondre aux incidents et aux demandes d’assistance et d’évolution</td><td>À compléter pendant le stage</td></tr>
+            <tr><td>Développer la présence en ligne de l’organisation</td><td><a href="#realisations">Site vitrine et ce portfolio</a></td></tr>
+            <tr><td>Travailler en mode projet</td><td>Synthèses réalisées en groupe lors de l’AP2</td></tr>
+            <tr><td>Mettre à disposition des utilisateurs un service informatique</td><td>À compléter pendant le stage</td></tr>
+            <tr><td>Organiser son développement professionnel</td><td><a href="#veille">Veille technologique</a>, portfolio, recherche de stage</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <h2>Me contacter</h2>
+      <p>
+        Je cherche un stage de 6 semaines à partir de mars 2027.
+        <strong class="todo">jawadalihamadi@gmail.com</strong>
+      </p>
+      <p>
+        <a href="https://github.com/Jwd-SIO">GitHub</a>
+      </p>
+    </section>
+
+  </main>
+
+
+</body>
+</html>

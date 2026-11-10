@@ -1,0 +1,206 @@
+/* ---------- Variables : toutes les couleurs et polices au même endroit ---------- */
+:root {
+  --encre: #14302b;
+  --fond: #f3f5f2;
+  --blanc: #ffffff;
+  --gris: #54655f;
+  --trait: #d3dbd7;
+  --accent: #0e6b5c;
+  --jaune: #f5c518;
+
+  --titres: "Bricolage Grotesque", "Trebuchet MS", sans-serif;
+  --texte: "Source Sans 3", Arial, sans-serif;
+  --ticket: "IBM Plex Mono", "Courier New", monospace;
+}
+
+/* ---------- Base ---------- */
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--encre);
+  font-family: var(--texte);
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3 { font-family: var(--titres); line-height: 1.15; margin: 0 0 0.6rem; }
+h1 { font-size: clamp(2rem, 5vw, 3.2rem); }
+h2 { font-size: 2rem; margin-bottom: 1rem; }
+h3 { font-size: 1.25rem; }
+h3.sub { margin-top: 2rem; }
+
+p { margin: 0 0 1rem; max-width: 65ch; }
+
+a { color: var(--accent); }
+a:focus-visible, .btn:focus-visible {
+  outline: 3px solid var(--jaune);
+  outline-offset: 2px;
+}
+
+/* ---------- En-tête et navigation ---------- */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.8rem clamp(1rem, 5vw, 4rem);
+  background: var(--encre);
+}
+
+.logo {
+  font-family: var(--titres);
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: var(--jaune);
+  text-decoration: none;
+}
+
+.site-header nav { display: flex; flex-wrap: wrap; gap: 0.4rem 1.2rem; }
+.site-header nav a { color: var(--blanc); text-decoration: none; font-size: 1rem; }
+.site-header nav a:hover { color: var(--jaune); }
+
+/* ---------- Sections ---------- */
+main section {
+  padding: 3.5rem clamp(1rem, 5vw, 4rem);
+  max-width: 62rem;
+  margin: 0 auto;
+}
+
+.intro { color: var(--gris); }
+
+/* ---------- Accueil ---------- */
+.hero {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+  padding-top: 4.5rem;
+}
+
+.hero-links { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+
+.btn {
+  display: inline-block;
+  padding: 0.7rem 1.3rem;
+  background: var(--encre);
+  color: var(--blanc);
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+}
+.btn:hover { background: var(--accent); }
+
+.btn-light {
+  background: transparent;
+  color: var(--encre);
+  border: 2px solid var(--encre);
+}
+.btn-light:hover { background: var(--encre); color: var(--blanc); }
+
+/* Le bon de commande : seul élément "décoré" de la page */
+.ticket {
+  background: var(--blanc);
+  padding: 1.5rem;
+  border: 2px dashed var(--encre);
+  border-top: 8px solid var(--jaune);
+  font-family: var(--ticket);
+  font-size: 0.95rem;
+  transform: rotate(1.5deg);
+}
+.ticket-title { font-weight: 700; margin-bottom: 0.8rem; }
+.ticket ul { list-style: none; margin: 0 0 1rem; padding: 0; }
+.ticket li { padding: 0.35rem 0; border-bottom: 1px dotted var(--gris); }
+.ticket li span { display: inline-block; min-width: 4.5rem; font-weight: 700; }
+.ticket-foot { margin: 0; color: var(--gris); font-size: 0.85rem; }
+
+/* ---------- Parcours ---------- */
+.timeline {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 0 0 0 1.5rem;
+  border-left: 3px solid var(--encre);
+}
+.timeline li { margin-bottom: 1.6rem; }
+.meta { color: var(--gris); font-size: 0.95rem; margin-bottom: 0.4rem; }
+
+/* ---------- Compétences ---------- */
+.skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: 1.5rem;
+}
+.skills > div {
+  background: var(--blanc);
+  padding: 1.2rem 1.4rem;
+  border-left: 5px solid var(--accent);
+}
+.skills p { margin-bottom: 0.3rem; }
+.level { color: var(--gris); font-size: 0.95rem; }
+
+/* ---------- Réalisations ---------- */
+.project {
+  background: var(--blanc);
+  padding: 1.6rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid var(--trait);
+}
+.project-next { border-style: dashed; }
+
+dl { margin: 1rem 0 0; }
+dt { font-weight: 600; margin-top: 1rem; }
+dd { margin: 0.2rem 0 0; max-width: 65ch; }
+
+/* ---------- Veille ---------- */
+.tools { padding-left: 1.2rem; max-width: 65ch; }
+.tools li { margin-bottom: 0.5rem; }
+.note { color: var(--gris); margin-top: 1rem; }
+
+/* ---------- Tableaux ---------- */
+.table-wrap { overflow-x: auto; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--blanc);
+  font-size: 1rem;
+}
+th, td { text-align: left; padding: 0.7rem 0.9rem; border: 1px solid var(--trait); vertical-align: top; }
+th { background: var(--encre); color: var(--blanc); font-weight: 600; }
+
+
+/* ---------- Mobile ---------- */
+@media (max-width: 720px) {
+  .hero { grid-template-columns: 1fr; padding-top: 3rem; }
+  .ticket { transform: none; }
+  h2 { font-size: 1.7rem; }
+}
+
+/* ---------- Ajouts pour la veille ---------- */
+.steps { max-width: 65ch; padding-left: 1.3rem; }
+.steps li { margin-bottom: 0.5rem; }
+
+.types {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.types > div { background: var(--blanc); padding: 1rem 1.2rem; border-top: 4px solid var(--jaune); }
+.types p { margin: 0.3rem 0 0; font-size: 1rem; }
+
+.todo-box {
+  border: 2px dashed var(--gris);
+  padding: 1.5rem;
+  text-align: center;
+  color: var(--gris);
+  background: var(--blanc);
+  max-width: 40rem;
+}
